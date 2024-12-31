@@ -14,17 +14,17 @@ class CategoryService
 
     public function store(array $data): void
     {
-        $pathToCover = $data['path_to_cover']->store('category-files', 'public');
         $category = new Category();
         $category->name = $data['name'];
+        $pathToCover = $data['path_to_cover']->store('category-files', 'public');
         $category->path_to_cover = '/storage/' . $pathToCover;
         $category->save();
     }
 
     public function update(array $data, Category $category): void
     {
-        $pathToCover = $data['path_to_cover']->store('category-files', 'public');
         $category->name = $data['name'];
+        $pathToCover = $data['path_to_cover']->store('category-files', 'public');
         $category->path_to_cover = '/storage/' . $pathToCover;
         $category->save();
     }

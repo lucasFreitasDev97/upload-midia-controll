@@ -11,7 +11,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $fillable= ['name', 'sub_category_id', 'path_to_cover'];
+    protected $fillable= ['name', 'path_to_cover'];
 
     public function subCategories(): HasMany
     {
