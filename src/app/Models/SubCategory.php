@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class SubCategory extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'category_id'];
+    protected $fillable = ['name', 'category_id', 'path_to_cover'];
 
     public function categories(): BelongsTo
     {
